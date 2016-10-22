@@ -1,0 +1,46 @@
+{
+    "name": "Cip",
+    "author": [
+        "Alexey"
+    ],
+    "url": "https://www.mediawiki.org/wiki/Skin:Cip",
+    "descriptionmsg": "cip-skin-desc",
+    "namemsg": "skinname-cip",
+    "license-name": "GPL-2.0+",
+    "type": "skin",
+    "ValidSkinNames": {
+        "cip": "Cip"
+    },
+    "MessagesDirs": {
+        "Cip": [
+            "i18n"
+        ]
+    },
+    "AutoloadClasses": {
+        "SkinCip": "SkinCip.php",
+        "CipTemplate": "CipTemplate.php"
+    },
+    "ResourceModules": {
+        "skins.cip.styles": {
+            "position": "top",
+            "styles": [
+                "assets/tether/css/tether.min.css",
+                "assets/bootstrap/css/bootstrap.min.css",
+                "assets/slick/slick.css",
+                "assets/css/style.less"
+            ]
+        },
+        "skins.cip.js": {
+            "scripts": [
+                "assets/tether/js/tether.min.js",
+                "assets/bootstrap/js/bootstrap.min.js",
+                "assets/slick/slick.min.js",
+                "assets/js/script.js"
+            ]
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "",
+        "remoteSkinPath": "Cip"
+    }
+}
