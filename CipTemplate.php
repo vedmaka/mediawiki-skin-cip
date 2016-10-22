@@ -75,7 +75,7 @@ class CipTemplate extends BaseTemplate {
                                     </a>
                                 </li>
                                 <li class="cip-menu-item-no-border">
-                                    <a href="#">
+                                    <a href="<?=SpecialPage::getTitleFor('Logout')->getFullURL()?>">
                                         Log Out
                                     </a>
                                 </li>
@@ -134,6 +134,13 @@ class CipTemplate extends BaseTemplate {
                             <? foreach ($this->data['action_urls'] as $key => $action): ?>
                                 <?php echo $this->makeListItem( $key, $action ); ?>
                             <? endforeach; ?>
+                            <? if($this->getSkin()->getUser()->isAllowed('upload')): ?>
+                                <li>
+                                    <a href="<?=SpecialPage::getTitleFor('Upload')->getFullURL()?>">
+                                        Upload
+                                    </a>
+                                </li>
+                            <? endif; ?>
                         </ul>
                     </div>
                 </div>
