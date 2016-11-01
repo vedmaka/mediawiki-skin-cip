@@ -106,7 +106,7 @@ class CipTemplate extends BaseTemplate {
                     <!-- Pictures -->
                     <div class="col-md-5 col-sm-3 cip-pictures">
                         <div class="cip-header-funded">
-                            Funded by the Dutch:
+                            Funded by the Dutch Ministry of Infrastructure and the Environment:
                         </div>
                         <ul>
                             <li>

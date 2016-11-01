@@ -97,7 +97,7 @@ a, a:active {
 
 	.cip-pictures {
 		@media (max-width: @break_first) {
-			padding-top: 30px;
+			padding-top: 10px;
 		}
 		@media (max-width: @break_second) {
 			padding-top: 0;
@@ -105,13 +105,29 @@ a, a:active {
 		.cip-header-funded {
 			text-align: right;
 			font-weight: bold;
+			padding-bottom: 6px;
+			font-size: 14px;
+			display: block;
+			margin-left: 50%;
+			@media (max-width: @break_first) {
+				margin-left: 40%;
+			}
+			@media (max-width: @break_second) {
+				margin-left: 40%;
+				font-size: 13px;
+			}
+			@media (max-width: 768px) {
+				font-size: 13px;
+				margin-left: 0;
+			}
 			@media (max-width: @break_tablet) {
-				float: left;
+				float: none;
 				padding-top: 22px;
 			}
 			@media (max-width: @break_phone) {
 				display: block;
 				float: none;
+				font-size: 15px;
 			}
 		}
 		ul {
