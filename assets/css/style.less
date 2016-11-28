@@ -204,6 +204,9 @@ a, a:active {
 					display: block;
 					float: right;
 					max-width: 458px;
+					@media (max-width: @break_second) {
+						max-width: 100%;
+					}
 				}
 				input[type="submit"] {
 					position: absolute;
@@ -229,6 +232,10 @@ a, a:active {
 					font-size: 15px;
 					list-style: none;
 					display: inline-block;
+
+					@media (max-width: @break_second) {
+						font-size: 13px;
+					}
 
 					@media (max-width: @break_tablet) {
 						font-size: 11px;
