@@ -186,9 +186,33 @@ a, a:active {
 	}
 
 	.cip-header-wrapper {
-		padding-bottom: 25px;
+
 		border-bottom: 6px solid @color_blue;
+		padding-bottom: 10px;
 		/*position: relative;*/
+
+		#header-search {
+
+			padding: 10px 15px 0 15px;
+			text-align: right;
+			overflow: hidden;
+
+			.search-input {
+				position: relative;
+				overflow: hidden;
+				input[type="search"] {
+					display: block;
+					float: right;
+					max-width: 475px;
+				}
+				input[type="submit"] {
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+			}
+		}
+
 	}
 
 	.cip-actions-wrapper {

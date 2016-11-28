@@ -9,6 +9,7 @@ class CipTemplate extends BaseTemplate {
 
 	private $userLoggedIn = false;
 	private $isMainPage = false;
+	private $isSearchPage = false;
 	private $isAdmin = false;
 
 	/**
@@ -29,6 +30,7 @@ class CipTemplate extends BaseTemplate {
         $this->userLoggedIn = $this->getSkin()->getUser() && $this->getSkin()->getUser()->isLoggedIn();
         $this->isMainPage = $this->getSkin()->getTitle() && $this->getSkin()->getTitle()->isMainPage();
         $this->isAdmin = $this->getSkin()->getUser() && in_array('sysop', $this->getSkin()->getUser()->getGroups());
+        $this->isSearchPage = $this->getSkin()->getTitle() && $this->getSkin()->getTitle()->isSpecial( 'Search' );
 
 		// Output HTML Page
 		$this->html( 'headelement' );
@@ -123,6 +125,18 @@ class CipTemplate extends BaseTemplate {
                             </li>
                         </ul>
                     </div>
+                    <? if( !$this->isSearchPage ): ?>
+                    <!-- Search form -->
+                    <div class="col-xs-12" id="header-search">
+                        <form action="<?php $this->text( 'wgScript' ) ?>" >
+                            <div class="search-input">
+                                <input class="form-control" type="search" name="search" placeholder="Search.." />
+                                <input type="submit" class="btn btn-default" value="Search" />
+                                <? echo Html::hidden( 'title', $this->get( 'searchtitle' ) ); ?>
+                            </div>
+                        </form>
+                    </div>
+                    <? endif; ?>
                 </div>
                 <? if($this->userLoggedIn): ?>
                 <div class="row cip-actions-wrapper">
