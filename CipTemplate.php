@@ -9,6 +9,7 @@ class CipTemplate extends BaseTemplate {
 
 	private $userLoggedIn = false;
 	private $isMainPage = false;
+	private $isAdmin = false;
 
 	/**
 	 * Outputs the entire contents of the (X)HTML page
@@ -27,6 +28,7 @@ class CipTemplate extends BaseTemplate {
 		// State flags
         $this->userLoggedIn = $this->getSkin()->getUser() && $this->getSkin()->getUser()->isLoggedIn();
         $this->isMainPage = $this->getSkin()->getTitle() && $this->getSkin()->getTitle()->isMainPage();
+        $this->isAdmin = $this->getSkin()->getUser() && in_array('sysop', $this->getSkin()->getUser()->getGroups());
 
 		// Output HTML Page
 		$this->html( 'headelement' );
@@ -129,6 +131,11 @@ class CipTemplate extends BaseTemplate {
 	                        <? foreach ($this->data['view_urls'] as $key => $action): ?>
                                 <?php echo $this->makeListItem( $key, $action ); ?>
 	                        <? endforeach; ?>
+                            <? if($this->isAdmin): ?>
+                                <li>
+                                    <a href="<?php echo SpecialPage::getTitleFor('SpecialPages')->getFullURL() ?>">Special Pages</a>
+                                </li>
+                            <? endif; ?>
                         </ul>
                         <ul class="float-sm-right">
                             <? foreach ($this->data['action_urls'] as $key => $action): ?>
