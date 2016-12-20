@@ -103,6 +103,13 @@ class CipTemplate extends BaseTemplate {
                                         Log In
                                     </a>
                                 </li>
+                                <li class="cip-menu-item-no-border">
+                                    <a href="<?=SpecialPage::getTitleFor('CipUsersRegister')->getFullURL()?>" data-toggle="tooltip"
+                                       data-placement="bottom"
+                                       title="Request an account">
+                                        Register
+                                    </a>
+                                </li>
                                 <? endif; ?>
                             </ul>
                         </div>
