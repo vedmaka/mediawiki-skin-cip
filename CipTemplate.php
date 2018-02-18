@@ -47,6 +47,7 @@ class CipTemplate extends BaseTemplate {
                     <div class="col-xs-1 cip-logo">
                         <a href="<?=Title::newMainPage()->getFullURL()?>">
                             <img src="<?=$this->getSkin()->getSkinStylePath('assets/img/logo.png')?>" />
+	                        <img style="margin-top: 20px;" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')?>" />
                         </a>
                     </div>
                     <!-- Menu -->
@@ -117,19 +118,27 @@ class CipTemplate extends BaseTemplate {
                     <!-- Pictures -->
                     <div class="col-md-5 col-sm-3 cip-pictures">
                         <div class="cip-header-funded">
-                            Funded by the Dutch Ministry of Infrastructure and the Environment:
+	                        Funded by the Nordic Council of Ministers and the Dutch Ministry of Infrastructure and the Environment:
                         </div>
                         <ul>
-                            <li>
+                            <!--<li>
                                 <a href="#">
-                                <img width="200" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')?>" />
+                                <img width="125" src="<?/*=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')*/?>" />
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                <img width="210" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic2.png')?>" />
-                                </a>
-                            </li>
+                            </li>-->
+
+	                        <li>
+		                        <a href="#">
+		                        <img width="200" src="/images/1/10/Nord_nmr_gb.png" />
+		                        </a>
+	                        </li>
+
+	                        <li>
+		                        <a href="#">
+		                        <img width="200" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic2.png')?>" />
+		                        </a>
+	                        </li>
+
                         </ul>
                     </div>
                     <? if( !$this->isSearchPage ): ?>
