@@ -119,7 +119,7 @@ class CipTemplate extends BaseTemplate {
 	                <div class="col-md-4 cip-logo">
 		                <a href="<?=Title::newMainPage()->getFullURL()?>">
 			                <img src="<?=$this->getSkin()->getSkinStylePath('assets/img/logo.png')?>" />
-			                <img style="margin-top: 20px; width: 200px;" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')?>" />
+			                <img style="margin-top: 20px;" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')?>" />
 		                </a>
 	                </div>
 
