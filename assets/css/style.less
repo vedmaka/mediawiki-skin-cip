@@ -26,6 +26,15 @@ a, a:active {
 	padding-top: 20px;
 
 	.cip-logo {
+		a {
+			text-decoration: none;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			img {
+				margin: 0 10px;
+			}
+		}
 		padding-top: 5px;
 		img {
 			width: 120px;
@@ -36,12 +45,12 @@ a, a:active {
 	}
 
 	.cip-menu {
-		padding-left: 70px;
+		/*padding-left: 70px;*/
 		@media (max-width: @break_second) {
-			padding-left: 30px;
+			/*padding-left: 30px;*/
 		}
 		@media (max-width: @break_tablet) {
-			padding-left: 75px;
+			/*padding-left: 75px;*/
 		}
 		.cip-title {
 			color: @color_blue;
@@ -584,6 +593,21 @@ a, a:active {
 		table.formtable {
 			th {
 				min-width: 150px;
+			}
+		}
+
+		#main-page-funded-by {
+			border-top: 3px solid rgb(1, 179, 236);
+			padding-top: 30px;
+			padding-bottom: 30px;
+			span {
+				font-weight: bold;
+				font-size: 16px;
+			}
+			.funded-images {
+				img {
+					margin-left: 25px;
+				}
 			}
 		}
 

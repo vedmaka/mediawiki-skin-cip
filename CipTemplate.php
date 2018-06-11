@@ -44,14 +44,14 @@ class CipTemplate extends BaseTemplate {
             <div class="cip-header">
                 <div class="row cip-header-wrapper">
                     <!-- Logo -->
-                    <div class="col-xs-1 cip-logo">
-                        <a href="<?=Title::newMainPage()->getFullURL()?>">
-                            <img src="<?=$this->getSkin()->getSkinStylePath('assets/img/logo.png')?>" />
-	                        <img style="margin-top: 20px;" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')?>" />
+                    <!--<div class="col-xs-1 cip-logo">
+                        <a href="<?/*=Title::newMainPage()->getFullURL()*/?>">
+                            <img src="<?/*=$this->getSkin()->getSkinStylePath('assets/img/logo.png')*/?>" />
+	                        <img style="margin-top: 20px;" src="<?/*=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')*/?>" />
                         </a>
-                    </div>
+                    </div>-->
                     <!-- Menu -->
-                    <div class="col-md-6 col-sm-8 cip-menu">
+                    <div class="col-md-8 col-sm-8 cip-menu">
                         <div class="cip-title"><a href="<?=Title::newMainPage()->getFullURL()?>">Climate Initiatives Platform</a></div>
                         <div class="cip-menu-items">
                             <ul>
@@ -115,18 +115,20 @@ class CipTemplate extends BaseTemplate {
                             </ul>
                         </div>
                     </div>
+
+	                <div class="col-md-4 cip-logo">
+		                <a href="<?=Title::newMainPage()->getFullURL()?>">
+			                <img src="<?=$this->getSkin()->getSkinStylePath('assets/img/logo.png')?>" />
+			                <img style="margin-top: 20px;" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')?>" />
+		                </a>
+	                </div>
+
                     <!-- Pictures -->
-                    <div class="col-md-5 col-sm-3 cip-pictures">
+                    <!--<div class="col-md-5 col-sm-3 cip-pictures">
                         <div class="cip-header-funded">
 	                        Funded by the Nordic Council of Ministers and the Dutch Ministry of Infrastructure and the Environment:
                         </div>
                         <ul>
-                            <!--<li>
-                                <a href="#">
-                                <img width="125" src="<?/*=$this->getSkin()->getSkinStylePath('assets/img/pic1.png')*/?>" />
-                                </a>
-                            </li>-->
-
 	                        <li>
 		                        <a href="#">
 		                        <img width="200" src="/images/1/10/Nord_nmr_gb.png" />
@@ -135,12 +137,13 @@ class CipTemplate extends BaseTemplate {
 
 	                        <li>
 		                        <a href="#">
-		                        <img width="200" src="<?=$this->getSkin()->getSkinStylePath('assets/img/pic2.png')?>" />
+		                        <img width="200" src="<?/*=$this->getSkin()->getSkinStylePath('assets/img/pic2.png')*/?>" />
 		                        </a>
 	                        </li>
 
                         </ul>
-                    </div>
+                    </div>-->
+
                     <? if( !$this->isSearchPage ): ?>
                     <!-- Search form -->
                     <div class="col-xs-12" id="header-search">
